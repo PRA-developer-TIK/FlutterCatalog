@@ -8,6 +8,8 @@ just right click on widget -> then click refactor and select what you need
  */
 
 
+//Naming a varible to make variables private start them with an underscore
+
 /*
 Using variables with strings and its data types
 Use (${})  symbol and then varName i.e ${var_name}
@@ -86,4 +88,20 @@ themeMode: ThemeMode.dark,(or) ThemeMode.light
   To move to a particular page after clicking on a button 
   use Navigator.pushNamed(context, routename);
 
+
+
  */
+
+/*
+For a stateful widget convert class to a stateful widget 
+declare state variables as class variables
+
+
+class _LoginPageState extends State<LoginPage> {
+String userName = "";
+.
+.
+.
+.
+}
+*/
