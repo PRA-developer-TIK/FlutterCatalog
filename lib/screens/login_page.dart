@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:sampleapp/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -20,30 +21,32 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
-              child: Column(
-                children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      hintText: "Enter your email",
-                      labelText: "Email",
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter your email",
+                        labelText: "Email",
+                      ),
                     ),
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      hintText: "Enter your password",
-                      labelText: "Password",
+                    TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        hintText: "Enter your password",
+                        labelText: "Password",
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () {
-                      print("Hi pratik");
-                    },
-                    style: TextButton.styleFrom(),
-                    child: Text("Login"),
-                  ),
-                ],
+                    SizedBox(height: 40),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.homeRoute);
+                      },
+                      style: TextButton.styleFrom(minimumSize: Size(120, 30)),
+                      child: Text("Login"),
+                    ),
+                  ],
+                ),
               ),
             )
           ],
