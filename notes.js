@@ -78,4 +78,12 @@ themeMode: ThemeMode.dark,(or) ThemeMode.light
 /************** To embed routes syntax is ************
   '/': (context) => HomePage(),
   routename : (context) => widgetName(),
+
+  Create a different file for routes in the lib folder 
+  create static routes for different pages
+  
+
+  To move to a particular page after clicking on a button 
+  use Navigator.pushNamed(context, routename);
+
  */
