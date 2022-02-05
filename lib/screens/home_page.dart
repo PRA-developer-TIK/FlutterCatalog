@@ -9,7 +9,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("AIRBNB "),
-        backgroundColor: Color(0xFFFF5A5F),
+        centerTitle: true,
+
+        // backgroundColor: Color(0xFFFF5A5F),
       ),
       body: Center(
         child: Container(
