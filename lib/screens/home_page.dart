@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
+import 'package:sampleapp/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   int days = 30;
@@ -25,7 +26,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
