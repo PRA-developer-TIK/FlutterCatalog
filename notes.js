@@ -105,3 +105,8 @@ String userName = "";
 .
 }
 */
+
+
+/************************ HELPFUL NOTES   *********************/
+//Never give decoration to child of widgets  give it to ancestors
+//If you want to change the color of a widget, you can do it in the widget itself.
