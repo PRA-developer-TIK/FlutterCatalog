@@ -81,11 +81,11 @@ themeMode: ThemeMode.dark,(or) ThemeMode.light
   '/': (context) => HomePage(),
   routename : (context) => widgetName(),
 
-  Create a different file for routes in the lib folder 
+  Create a different file for routes in the lib folder
   create static routes for different pages
-  
 
-  To move to a particular page after clicking on a button 
+
+  To move to a particular page after clicking on a button
   use Navigator.pushNamed(context, routename);
 
 
@@ -93,7 +93,7 @@ themeMode: ThemeMode.dark,(or) ThemeMode.light
  */
 
 /*
-For a stateful widget convert class to a stateful widget 
+For a stateful widget convert class to a stateful widget
 declare state variables as class variables
 
 
@@ -111,10 +111,21 @@ String userName = "";
 //sizes go in the child widget
 //position is set by parents
 
+/**************** JSON DECODE  *****************
+ use data:convert library
+ then after importing above lib use jsondecode method 
+
+
+*/
+
 
 
 
 /************************ HELPFUL NOTES   *********************/
 //Never give decoration to child of widgets  give it to ancestors
 //If you want to change the color of a widget, you can do it in the widget itself.
-
+// In Dart and Flutter, a static method (or static function) is a method
+//  defined as a member of a class but can be directly called
+//   without creating an object instance via the constructor.
+//   In other words, a static
+// method is a port of a class instead of being a part of a specific instance
