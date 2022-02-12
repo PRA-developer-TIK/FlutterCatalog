@@ -46,11 +46,37 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: (catalogModel.items != null && catalogModel.items.isNotEmpty)
-            ? ListView.builder(
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 16,
+                    crossAxisSpacing: 16),
                 itemCount: catalogModel.items.length,
                 itemBuilder: (context, index) {
-                  return ItemWidget(
-                    item: catalogModel.items[index],
+                  final item = catalogModel.items[index];
+
+                  return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: GridTile(
+                      header: Container(
+                        child: Text(item.name),
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple,
+                        ),
+                      ),
+                      child: Image.network(item.image),
+                      footer: Container(
+                        child: Text(
+                          item.price.toString(),
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(color: Colors.black),
+                      ),
+                    ),
                   );
                 },
               )
