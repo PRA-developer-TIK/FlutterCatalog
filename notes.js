@@ -115,6 +115,11 @@ String userName = "";
  use data:convert library
  then after importing above lib use jsondecode method 
 
+ so basically we first need to convert json to a string
+ using rootBundle.loadString('json_file_name.json')
+ rootBundle.loadString('json_file_name.json') returns a future i.e a promise that will be resolved when the file is loaded.
+  then we need to convert that string  returned to a map
+using jsonDecode(string)
 
 */
 
@@ -129,3 +134,7 @@ String userName = "";
 //   without creating an object instance via the constructor.
 //   In other words, a static
 // method is a port of a class instead of being a part of a specific instance
+
+
+//if you have final variables and you want to use it without initializing
+//then use a factory constructor i.e it helps when you want to iinitialize final variables based on logic 
